@@ -1,6 +1,6 @@
-import { useRef, useState } from "react"
+import React, { useRef, useState, useEffect } from "react"
 
-export default function DiaryEditor({ onCreate }){
+export default React.memo(function DiaryEditor({ onCreate }){
 
     const authorInput = useRef();
     const contentInput = useRef();
@@ -58,4 +58,4 @@ export default function DiaryEditor({ onCreate }){
             <button onClick={handleSubmit}>일기저장하기</button>
         </div>
     )
-}
+})
